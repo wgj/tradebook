@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Create Products",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "args": ["--create-products"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Update Stocks",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "args": ["--update-stocks"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Create Table",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "args": ["--create-tables"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}
