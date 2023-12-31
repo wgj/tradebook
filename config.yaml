@@ -2,7 +2,6 @@ stocks:
   - AAPL
   - MSFT
 days: 90
-api_key: 658875818d4941.75886586
 database:
   host: 127.0.0.1
   port: 5432
