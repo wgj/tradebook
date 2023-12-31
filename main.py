@@ -12,7 +12,7 @@ from sqlalchemy.dialects.postgresql import insert
 
 def update_historical_data(config, engine):
     stock_dfs = []
-    for df in eodhd_.get_historical_data(config['api_key'], config['stocks'], config['days']):
+    for df in eodhd_.get_historical_data(config['stocks'], config['days']):
         stock_dfs.append(df)
 
     for df in stock_dfs:
