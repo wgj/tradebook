@@ -4,11 +4,14 @@ from psycopg2.errors import UniqueViolation
 import logging
 from sqlalchemy.sql import text
 from datetime import datetime, timedelta
+import os
+from dotenv import load_dotenv
 
 
 def setup_connection(config):
     pg_user = config['database']['user']
-    pg_password = config['database']['password']
+    load_dotenv()
+    pg_password = os.environ.get("POSTGRES_PASSWORD")
     pg_host = config['database']['host']
     pg_port = config['database']['port']
     pg_database = config['database']['database']
