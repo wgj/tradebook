@@ -19,6 +19,7 @@ def create_tables(engine):
     logger = logging.getLogger('main')
     metadata = MetaData()
 
+    logging.info('Defining table `stocks`')
     stocks = Table(
     'stocks', metadata, 
     Column('date', Date, primary_key=True), 
@@ -30,6 +31,17 @@ def create_tables(engine):
     Column('close', Float), 
     Column('adjusted_close', Float), 
     Column('volume', Integer)
+    )
+
+    logging.info('Defining table `dor`')
+    dor = Table(
+    'dor', metadata, 
+    Column('date', Date, primary_key=True), 
+    Column('symbol', String, primary_key=True),
+    # TODO(wgj): Decide if I like these column names.
+    Column('C-C Returns', Float),
+    Column('H-L Returns', Float),
+    Column('O-C Returns', Float)
     )
 
     metadata.create_all(engine)

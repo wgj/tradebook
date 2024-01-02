@@ -21,7 +21,7 @@
             "envFile": "${workspaceFolder}/.env"
         },
         {
-            "name": "Create Table",
+            "name": "Create Tables",
             "type": "python",
             "request": "launch",
             "program": "main.py",

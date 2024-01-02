@@ -1,5 +1,5 @@
 import yaml
-import pandas as pd
+
 from sqlalchemy import MetaData, Table, create_engine
 import eodhd_
 import logging
@@ -18,6 +18,9 @@ def update_historical_data(config, engine):
     for df in stock_dfs:
         db.insert_dataframe(engine, 'stocks', df)
         db.prune_old_data(engine, 'stocks', config['days'])
+
+def genterate_products(config, engine):
+    products.distribution_of_returns(config, engine)
 
 def main():
     with open('config.yaml', 'r') as f:
